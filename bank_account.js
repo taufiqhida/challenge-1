@@ -2,7 +2,7 @@ let saldoBank = 0; // Di buat seperti camelCase
 
 function tambahSaldo() { // Di buat seperti camelCase
     let tambah = parseFloat(window.prompt('Tambah berapa ?')); //Input tambah salso
-    if (tambah === null) { // jika bukan angka maka akan jalan
+    if (isNaN(tambah)) { // jika bukan angka maka akan jalan
         window.alert("Gagal Input")//Hasilnya kan gagal input
         return;
     }
@@ -14,7 +14,7 @@ function kurangiSaldo() { // Di buat seperti camelCase
         window.alert("Kurang Saldo") //Hasilnya akan kurang salso
         return;
     }
-    if (kurang === null) { // jika bukan angka maka akan jalan
+    if (isNaN(kurang)) { // jika bukan angka maka akan jalan
         window.alert("Gagal Input")//Hasilnya kan gagal input
         return;
     }
