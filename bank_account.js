@@ -11,7 +11,7 @@ function tambahSaldo() { // Di buat seperti camelCase
 function kurangiSaldo() { // Di buat seperti camelCase
     let kurang = parseFloat(window.prompt('kurangi berapa ?'));//Input kurang saldo
     if (kurang > saldoBank) { //Jika saldo mu kurang dari pengeluaran akan jalan
-        window.alert("Kurang Saldo") //Hasilnya akan kurang salso
+        window.alert("Saldo Anda kurang") //Hasilnya akan kurang salso
         return;
     }
     if (isNaN(kurang)) { // jika bukan angka maka akan jalan
