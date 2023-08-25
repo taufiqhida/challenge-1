@@ -1,25 +1,31 @@
 let saldoBank = 0; // Di buat seperti camelCase
 
 function tambahSaldo() { // Di buat seperti camelCase
-    let tambah = parseFloat(window.prompt('Tambah berapa ?')); //Input tambah salso
+    let tambah = parseFloat(window.prompt('Tambah berapa ?')); //Input tambah saldo
     if (isNaN(tambah)) { // jika bukan angka maka akan jalan
         window.alert("Gagal Input")//Hasilnya kan gagal input
         return;
+    }else{
+        saldoBank += tambah;
+        window.alert(`Berhasil Menambah Saldo Sebesar Rp. ${tambah},00`);
     }
-    saldoBank += tambah;
+    
 }
 function kurangiSaldo() { // Di buat seperti camelCase
     let kurang = parseFloat(window.prompt('kurangi berapa ?'));//Input kurang saldo
-    if (kurang > saldoBank) { //Jika saldo mu kurang dari pengeluaran akan jalan
-        window.alert("Saldo Anda kurang") //Hasilnya akan kurang salso
-        return;
-    }
     if (isNaN(kurang)) { // jika bukan angka maka akan jalan
         window.alert("Gagal Input")//Hasilnya kan gagal input
         return;
+    }else{
+        if (kurang > saldoBank) { //Jika saldo mu kurang dari pengeluaran akan jalan
+            window.alert("Saldo Anda kurang") //Hasilnya akan kurang saldo
+            return;
+        }else{
+            saldoBank -= kurang;
+            window.alert("Berhaasil Mengurangi saldo");
+        }
     }
-    saldoBank -= kurang;
 }
 function tampilkanSaldo() { // Di buat seperti camelCase
-    window.alert(`Saldo bank mu sebesar ${saldoBank}`);
+    window.alert(`Saldo bank mu sebesar Rp. ${saldoBank},00`);
 }
