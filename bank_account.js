@@ -9,7 +9,7 @@ function tambahSaldo() { // Di buat seperti camelCase
     saldoBank += tambah;
 }
 function kurangiSaldo() { // Di buat seperti camelCase
-    let kurang = parseFloat(window.prompt('kurang9 berapa ?'));//Input kurang saldo
+    let kurang = parseFloat(window.prompt('kurangi berapa ?'));//Input kurang saldo
     if (kurang > saldoBank) { //Jika saldo mu kurang dari pengeluaran akan jalan
         window.alert("Kurang Saldo") //Hasilnya akan kurang salso
         return;
